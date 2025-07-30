@@ -45,22 +45,22 @@ const Navbar = () => {
             </motion.div>
           </Link>
         </div>
-  
+
         <div className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-  
+
         <ul className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
           <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-  
+
           <li className={styles.dropdown}>
             <span
               className={styles.dropdownTrigger}
               onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
             >
-              Services
+              Services <span className={styles.arrow}>▾</span>
             </span>
             <ul
               className={`${styles.dropdownMenu} ${
@@ -74,7 +74,7 @@ const Navbar = () => {
               <li><Link href="/services/house-maintenance" onClick={() => setMenuOpen(false)}>House Maintenance</Link></li>
             </ul>
           </li>
-  
+
           <li><Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         </ul>
       </nav>

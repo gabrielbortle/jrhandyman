@@ -1,13 +1,130 @@
 .footer {
-    padding: 2rem;
-    background-color: #333;
-    color: #fff;
+  background-color: #670c18;
+  color: #bf9b32;
+  padding: 3rem 1rem 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+/* Logo */
+.logoWrapper {
+  flex: 1 1 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoWrapper img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Navigation */
+.nav {
+  flex: 2 1 300px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: center;
+}
+
+.menuTitle {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #bf9b32;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.menu li {
+  font-size: 1.15rem;
+}
+
+.menu li a {
+  color: #bf9b32;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ffe066;
+  text-decoration: underline;
+}
+
+/* Contact info */
+.contactInfo {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.15rem;
+  align-items: center;
+  text-align: center;
+}
+
+.contactInfo a {
+  color: #bf9b32;
+  text-decoration: none;
+}
+
+.contactInfo a:hover {
+  color: #ffe066;
+  text-decoration: underline;
+}
+
+/* Footer bottom */
+.copy {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #bf9b32cc;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.4;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-top: 2rem;
+    gap: 2rem;
   }
-  
-  .footer p {
-    font-size: 14px;
-    margin: 0;
+
+  .menu {
+    justify-content: center;
+    gap: 1rem 1.5rem;
   }
-  
+
+  .menuTitle {
+    font-size: 1.4rem;
+  }
+
+  .contactInfo {
+    font-size: 1rem;
+  }
+
+  .menu li {
+    font-size: 1.05rem;
+  }
+}

@@ -59,4 +59,10 @@
   .viewAll:hover {
     color: #9e1313;
   }
+
+  .linkWrapper {
+    text-decoration: none;
+    color: inherit;
+  }
+  
   

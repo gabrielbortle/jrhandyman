@@ -1,7 +1,27 @@
+:root {
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-opensans); /* Change this if you switch fonts */
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-body), Arial, sans-serif;
   margin: 0;
-  padding: 0;
+}
+
+/* Apply body font to common text elements */
+p,
+li,
+ul,
+a {
+  font-family: var(--font-body), Arial, sans-serif;
+}
+
+/* Headings and hero titles use heading font */
+h1,
+h2,
+h3,
+.hero-title {
+  font-family: var(--font-heading), sans-serif;
 }
 
 .navbar-wrapper {

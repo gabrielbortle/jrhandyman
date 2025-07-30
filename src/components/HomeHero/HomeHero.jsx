@@ -1,18 +1,49 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import styles from './HomeHero.module.css';
 import Image from 'next/image';
+
 const HomeHero = ({ data }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} ref={ref}>
       <div className={styles.overlay}>
         <div className={styles.content}>
-          <h1>
-            {data.heading} <span className={styles.highlight}>{data.highlight}</span>
-          </h1>
-          <p>{data.subheading}</p>
-          <a href={data.ctaLink} className={styles.cta}>
+          <motion.h1
+            initial={{ opacity: 0, y: 60 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
+          >
+            {data.heading}{' '}
+            <motion.span
+              className={styles.highlight}
+              initial={{ opacity: 0, x: -30 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 1.4, ease: 'easeOut', delay: 0.3 }}
+            >
+              {data.highlight}
+            </motion.span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.2, delay: 0.6, ease: 'easeOut' }}
+          >
+            {data.subheading}
+          </motion.p>
+
+          <motion.a
+            href={data.ctaLink}
+            className={styles.cta}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 1, delay: 0.9, ease: 'easeOut' }}
+          >
             {data.ctaText}
-          </a>
+          </motion.a>
         </div>
       </div>
     </section>

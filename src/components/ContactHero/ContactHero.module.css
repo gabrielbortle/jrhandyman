@@ -1,0 +1,71 @@
+.hero {
+    position: relative;
+    background-image: url('/carpentry1.jpg');
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.70); /* dark transparent overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #a8061c;
+  }
+  
+  .subtitle {
+    font-size: 1.75rem;
+    color: #bf9b32;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2.75rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    .hero {
+        position: relative;
+        background-image: url('../../../public/carpentry1.jpg'); /* make sure this image is in /public/images */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        color: white;
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+  }
+  
