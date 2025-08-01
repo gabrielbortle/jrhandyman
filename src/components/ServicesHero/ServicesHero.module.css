@@ -29,15 +29,40 @@
 .content h1 {
   font-size: 3rem;
   margin-bottom: 0.5em;
+  color: #a8061c;
+
 }
+
+.content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+  font-weight: 400;
+  color: #bf9b32;
+
+}
+
+.content p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #bf9b32;
+
+}
+
+@media (max-width: 768px) {
 
 .content h2 {
   font-size: 1.6rem;
   margin-bottom: 1em;
   font-weight: 400;
+  color: #bf9b32;
+
 }
 
 .content p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
+  color: #bf9b32;
+
+}
+
 }
