@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Link from 'next/link';
 import styles from './HomeHero.module.css';
 import Image from 'next/image';
 
@@ -35,15 +36,16 @@ const HomeHero = ({ data }) => {
             {data.subheading}
           </motion.p>
 
-          <motion.a
-            href={data.ctaLink}
-            className={styles.cta}
+          {/* CTA Button using modern Next.js Link */}
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1, delay: 0.9, ease: 'easeOut' }}
           >
-            {data.ctaText}
-          </motion.a>
+            <Link href={data.ctaLink} className={styles.cta}>
+              {data.ctaText}
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>

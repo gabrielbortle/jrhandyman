@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-  },
+    "export": "next export"
+  },  
   "dependencies": {
     "framer-motion": "^12.12.1",
     "lucide-react": "^0.510.0",

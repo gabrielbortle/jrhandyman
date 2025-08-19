@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import Image from 'next/image';
-import logo from '../../../public/logo.jpg';
+import logo from '../../../public/logo.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,18 +45,18 @@ const Navbar = () => {
             </motion.div>
           </Link>
         </div>
-
+  
         <div className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-
+  
         <ul className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
           <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-
+  
           <li className={styles.dropdown}>
-            <span
+          <span
               className={styles.dropdownTrigger}
               onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
             >
@@ -74,7 +74,7 @@ const Navbar = () => {
               <li><Link href="/services/house-maintenance" onClick={() => setMenuOpen(false)}>House Maintenance</Link></li>
             </ul>
           </li>
-
+  
           <li><Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         </ul>
       </nav>
